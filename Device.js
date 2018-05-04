@@ -1,6 +1,20 @@
 import './libraries/eventemitter2.js';
+import {mean, variance} from './libraries/simple-statistics.js'
 
-export class Button extends EventEmitter2{
+export
+class InputDevice extends EventEmitter2{
+    tick(value){
+    }
+}
+
+export
+class TimeAnalysizer extends InputDevice{
+    tick(elapsed){
+    }
+}
+
+export 
+class Button extends InputDevice{
     constructor(initialValue = 1, offValue = 1){
         super();
         this.lastValue = initialValue;
@@ -13,15 +27,17 @@ export class Button extends EventEmitter2{
          */
         if(this.lastValue !== value){
             if(value === this.offValue){
-                this.emit("release");
+                this.emit("release", this);
             }else{
-                this.emit("press");
+                this.emit("press", this);
             }
             this.lastValue = value;
         }
     }
 }
-export class CapasitiveSensor extends EventEmitter2{
+
+export 
+class ThresholdedSensor extends InputDevice{
     constructor(threshold = 100){
         super();
         this.threshold = threshold;
@@ -30,30 +46,56 @@ export class CapasitiveSensor extends EventEmitter2{
         this.state = false;
     }
     tick(value){
-        
+        this.emit("tick", value);
         let over  = value > this.threshold;
         
         if(this.state != over){
             if(over == true){
-                this.emit("activate");
+                this.emit("press", this);
             }else{
-                this.emit("release");
+                this.emit("release", this);
             }
             this.state = over;
         }
         let relativeValue = value/this.mean;
         this.value = relativeValue;
     }
-    reset(values){
+    reset(values, outlierMultiplier = 1.5){
         // debugger
         let avg = mean(values);
         let vari = variance(values);
-        let threshold = avg + 10*vari;
+        let threshold = avg + outlierMultiplier * vari;
         this.threshold = threshold;
         this.mean = avg;
     }
 }
-export class AnalogReader extends EventEmitter2{
+
+export 
+class CapasitiveSensor extends ThresholdedSensor{
+
+    reset(values){
+        return super.reset(values, 10)
+    }
+
+    tick(value){
+        this.emit("tick", value);
+        let over  = value > this.threshold || value < 0;
+        
+        if(this.state != over){
+            if(over == true){
+                this.emit("press", this);
+            }else{
+                this.emit("release", this);
+            }
+            this.state = over;
+        }
+        let relativeValue = value/this.mean;
+        this.value = relativeValue;
+    }
+}
+
+export 
+class AnalogReader extends InputDevice{
     constructor(){
         super();
         this.value = 0;
@@ -64,7 +106,8 @@ export class AnalogReader extends EventEmitter2{
     }
 }
 
-export class CatagorialReader extends EventEmitter2{
+export 
+class CatagorialReader extends InputDevice{
     constructor(defaultValue = 0){
         super();
         this.value = defaultValue;
