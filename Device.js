@@ -1,5 +1,4 @@
 import './libraries/eventemitter2.js';
-import {mean, variance} from './libraries/simple-statistics.js'
 
 export
 class InputDevice extends EventEmitter2{

@@ -1,6 +1,5 @@
-import './libraries/p5.js';
-import './libraries/p5.serialport.js';
 import './libraries/eventemitter2.js';
+import {InputDevice} from './Device.js';
 
 export 
 class Board extends EventEmitter2{

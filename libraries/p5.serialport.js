@@ -14,8 +14,6 @@
  *  https://github.com/vanevery/p5.serialport
  *
  */
-import './p5.js';
-
 
 (function(root, factory) {
   if (typeof define === 'function' && define.amd)
