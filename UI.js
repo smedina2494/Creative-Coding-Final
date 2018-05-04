@@ -48,6 +48,17 @@ var r = 2 // just a variable that will dictate how fast the ball is moving in th
 
 function setup() {
 	createCanvas(1200, 600);
+    console.warn('UI hit')
+
+    window.bend.on('press', function firstBlock(){
+        firstBlockY = firstBlockY - 30;
+        if (firstBlockY < 0){ 									//cause the block to wrap around on the y axis
+          firstBlockY = 170; 
+        }
+    })
+    // TODO:
+    
+    
 }
 
 
@@ -270,3 +281,5 @@ var value2=2;
 //     value2 = 2;
 //   }
 // }
+
+

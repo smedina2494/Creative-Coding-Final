@@ -12,7 +12,7 @@ let piezo = new ThresholdedSensor(50);
 window.touch = touch
 window.bend = bend
 window.piezo = piezo
-
+console.warn('index hit')
 let board = new Board([touch, bend, piezo]);
 board.connect({baudrate: 9600});
 
@@ -29,7 +29,7 @@ let keyboard = new Keybaord();
 //    console.log(`point`, point)
 //});
 
-bend.on('')
+
 
 // uncomment if keyboard wanted
 // keyboard.on('press', (e) =>{
