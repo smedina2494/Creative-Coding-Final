@@ -52,9 +52,23 @@ function setup() {
 
     window.bend.on('press', function firstBlock(){
         firstBlockY = firstBlockY - 30;
-        if (firstBlockY < 0){ 									//cause the block to wrap around on the y axis
+     if (firstBlockY < 0){ 									//cause the block to wrap around on the y axis
           firstBlockY = 170; 
         }
+    })
+    
+     window.touch.on('press', function firstBlock(){
+       secondBlockY = secondBlockY - 30;
+      if (secondBlockY < 200){ 									//cause the block to wrap around on the y axis
+      secondBlockY = 370;
+        }
+    })
+    
+    window.piezo.on('press', function firstBlock(){
+    thirdBlockY = thirdBlockY - 30;
+      if (thirdBlockY < 400){ 									//cause the block to wrap around on the y axis
+      thirdBlockY = 570;
+            }
     })
     // TODO:
     
