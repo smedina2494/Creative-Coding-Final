@@ -19,6 +19,7 @@ board.connect({baudrate: 9600});
 
 let keyboard = new Keybaord();
 
+touch.on(`tick`, console.log);
 // 
 // board.on('line', line => {
 //     console.log(`line`, String.fromCharCode(...line))
