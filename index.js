@@ -6,7 +6,7 @@ import {Button, ThresholdedSensor} from './Device.js';
 
 
 
-let touch = new ThresholdedSensor(200);
+let touch = new ThresholdedSensor(1000);
 let bend = new ThresholdedSensor(600);
 let piezo = new ThresholdedSensor(50);
 window.touch = touch
@@ -19,7 +19,7 @@ board.connect({baudrate: 9600});
 
 let keyboard = new Keybaord();
 
-touch.on(`tick`, console.log);
+//touch.on(`tick`, console.log);
 // 
 // board.on('line', line => {
 //     console.log(`line`, String.fromCharCode(...line))
