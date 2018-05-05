@@ -16,7 +16,7 @@ var secondBlockX=(400);
 var secondBlockY=(355);
 
 //second ball variables
-var secondLocationX=(700);
+var secondLocationX=(1000);
 var secondLocationY=(300);
 
 
@@ -32,17 +32,17 @@ var score = 0;
 var showingText = false;
 
 //ball 1 speed variables
-var m = 5	// just a variable that will dictate how fast the ball is moving in the x direction
+var m = 3.5	// just a variable that will dictate how fast the ball is moving in the x direction
 var l = 2 // just a variable that will dictate how fast the ball is moving in the y direction, but can also indicate the direction when multiplied by -1
 
 
 //ball 2 speed variables
-var o = 5	// just a variable that will dictate how fast the ball is moving in the x direction
-var a = 3.5 // just a variable that will dictate how fast the ball is moving in the y direction, but can also indicate the direction when multiplied by -1
+var o = 3	// just a variable that will dictate how fast the ball is moving in the x direction
+var a = 1 // just a variable that will dictate how fast the ball is moving in the y direction, but can also indicate the direction when multiplied by -1
 
 
 //ball 3 speed variables
-var q = 5	// just a variable that will dictate how fast the ball is moving in the x direction
+var q = 3.5	// just a variable that will dictate how fast the ball is moving in the x direction
 var r = 2 // just a variable that will dictate how fast the ball is moving in the y direction, but can also indicate the direction when multiplied by -1
 
 
