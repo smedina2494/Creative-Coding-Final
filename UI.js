@@ -72,7 +72,6 @@ function setup() {
       thirdBlockY = 560;
             }
     })
-    // TODO:
     
     
 }
@@ -194,7 +193,7 @@ function draw() {
 		firstLocationX = 1200;
 	}
 	
-	if (firstLocationY > 200 || firstLocationY < 0){		// will bounce along the y axis
+	if (firstLocationY > 180 || firstLocationY < 20){		// will bounce along the y axis
 		l = l * -1;
 	}
 	
@@ -205,7 +204,7 @@ function draw() {
 	}
 	
 	
-	if (secondLocationY > 400 || secondLocationY < 200){		// will bounce along the y axis
+	if (secondLocationY > 380 || secondLocationY < 220){		// will bounce along the y axis
 		 a = a * -1;
 	}
 	
@@ -213,11 +212,6 @@ function draw() {
 		//BALL 3
 	if (thirdLocationX < 1){				//will bounce along the x axis
 		thirdLocationX = 1200;
-	}
-	
-	
-	if (thirdLocationY > 600 || thirdLocationY < 400){		// will bounce along the y axis
-		r = r * -1;
 	}
 	
 	
