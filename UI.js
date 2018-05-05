@@ -4,7 +4,7 @@ const g = 5;
 
 //first block variables
 var firstBlockX=(100);
-var firstBlockY=(180);
+var firstBlockY=(170);
 
 //first ball variables
 var firstLocationX=(600);
@@ -13,7 +13,7 @@ var firstLocationY=(100);
 
 //second block variables
 var secondBlockX=(400);
-var secondBlockY=(380);
+var secondBlockY=(370);
 
 //second ball variables
 var secondLocationX=(600);
@@ -22,7 +22,7 @@ var secondLocationY=(300);
 
 //third block variables
 var thirdBlockX=(700);
-var thirdBlockY=(580);
+var thirdBlockY=(570);
 
 //second ball variables
 var thirdLocationX=(600);
@@ -48,8 +48,9 @@ var r = 2 // just a variable that will dictate how fast the ball is moving in th
 
 function setup() {
 	createCanvas(1200, 600);
+    //code to allow interaction with the arduino
     console.warn('UI hit')
-
+    
     window.bend.on('press', function firstBlock(){
         firstBlockY = firstBlockY - 30;
      if (firstBlockY < 0){ 									//cause the block to wrap around on the y axis
