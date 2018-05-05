@@ -269,32 +269,3 @@ var value2=2;
   thirdBlockY = 570;
 		}
 	}
-	
-	
-	
-// 	if (value === 0) {
-//     firstBlockY = firstBlockY - 30;
-//   }if (firstBlockY < 0){ 									//cause the block to wrap around on the y axis
-//   firstBlockY = 170;
-// 	}else {
-//     value = 0;
-//   }
-// 	//Ball 2
-// 		if (value1 === 1) {
-//     secondBlockY = secondBlockY - 30;
-//   }if (secondBlockY < 200){ 									//cause the block to wrap around on the y axis
-//   secondBlockY = 370;
-// 	}else {
-//     value1 = 1;
-//   }
-// 		//Ball 2
-// 		if (value2 === 2) {
-//     thirdBlockY = thirdBlockY - 30;
-//   }if (thirdBlockY < 400){ 									//cause the block to wrap around on the y axis
-//   thirdBlockY = 570;
-// }else {
-//     value2 = 2;
-//   }
-// }
-
-
