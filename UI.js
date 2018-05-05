@@ -87,8 +87,8 @@ var hit3 = false;
 function draw() {
 	
 		//These three rectangles are the borders/backgrounds for each playing area
-	strokeWeight(4);
-	//Game 1
+	noStroke();						//no stroke for the blocks looks more retro
+    //Game 1
 	fill(240,146,34); //color of top game area
 	rect(0, 0, 1200, 200);
 
@@ -124,9 +124,8 @@ function draw() {
 	pop();
     
 	
-	//Code for collision of blocks with bombs
+    //Code for collision of blocks with bombs
 	//Code for interaction TOP
-	strokeWeight(0);													//no stroke for the blocks looks more retro
 	fill("green");														//color of the first block
 	rect(firstBlockX,firstBlockY,40,40);
 	fill("red");															//color of the attacking ball
@@ -134,17 +133,15 @@ function draw() {
 	
 	
 	//Code for interaction Middle
-	strokeWeight(0);													//no stroke for the blocks looks more retro
 	fill("green");														//color of the first block
 	rect(secondBlockX,secondBlockY,40,40);
 	fill("red");															//color of the attacking ball
 	ellipse(secondLocationX,secondLocationY,40,40);
 	
 	
-	//Code for interaction Bottom
-	strokeWeight(0);													//no stroke for the blocks looks more retro
+	//Code for interaction Bottom												
 	fill("green");														//color of the first block
-	rect(thirdBlockX,thirdBlockY,40,40);
+	rect(thirdBlockX,thirdBlockY,45,45);
 	fill("red");															//color of the attacking ball
 	ellipse(thirdLocationX,thirdLocationY,40,40);
 	
