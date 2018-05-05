@@ -4,46 +4,46 @@ const g = 5;
 
 //first block variables
 var firstBlockX=(100);
-var firstBlockY=(170);
+var firstBlockY=(155);
 
 //first ball variables
-var firstLocationX=(600);
+var firstLocationX=(1200);
 var firstLocationY=(100);
 
 
 //second block variables
 var secondBlockX=(400);
-var secondBlockY=(370);
+var secondBlockY=(355);
 
 //second ball variables
-var secondLocationX=(600);
+var secondLocationX=(700);
 var secondLocationY=(300);
 
 
 //third block variables
 var thirdBlockX=(700);
-var thirdBlockY=(570);
+var thirdBlockY=(555);
 
 //second ball variables
-var thirdLocationX=(600);
+var thirdLocationX=(400);
 var thirdLocationY=(500);
 
 var score = 0;
 var showingText = false;
 
 //ball 1 speed variables
-var m = 4	// just a variable that will dictate how fast the ball is moving in the x direction
-var l = 2 // just a variable that will dictate how fast the ball is moving in the y direction, but can also indicate the direction when multiplied by -1
+var m = 5	// just a variable that will dictate how fast the ball is moving in the x direction
+var l = 2   // just a variable that will dictate how fast the ball is moving in the y direction, but can also indicate the direction when multiplied by -1
 
 
 //ball 2 speed variables
-var o = 3	// just a variable that will dictate how fast the ball is moving in the x direction
-var a = 3 // just a variable that will dictate how fast the ball is moving in the y direction, but can also indicate the direction when multiplied by -1
+var o = 6   // just a variable that will dictate how fast the ball is moving in the x direction
+var a = 3.5 // just a variable that will dictate how fast the ball is moving in the y direction, but can also indicate the direction when multiplied by -1
 
 
 //ball 3 speed variables
 var q = 5	// just a variable that will dictate how fast the ball is moving in the x direction
-var r = 2 // just a variable that will dictate how fast the ball is moving in the y direction, but can also indicate the direction when multiplied by -1
+var r = 2   // just a variable that will dictate how fast the ball is moving in the y direction, but can also indicate the direction when multiplied by -1
 
 
 function setup() {
@@ -54,21 +54,21 @@ function setup() {
     window.bend.on('press', function firstBlock(){
         firstBlockY = firstBlockY - 30;
      if (firstBlockY < 0){ 									//cause the block to wrap around on the y axis
-          firstBlockY = 170; 
+          firstBlockY = 155; 
         }
     })
     
      window.touch.on('press', function firstBlock(){
        secondBlockY = secondBlockY - 30;
       if (secondBlockY < 200){ 									//cause the block to wrap around on the y axis
-      secondBlockY = 370;
+      secondBlockY = 355;
         }
     })
     
     window.piezo.on('press', function firstBlock(){
     thirdBlockY = thirdBlockY - 30;
       if (thirdBlockY < 400){ 									//cause the block to wrap around on the y axis
-      thirdBlockY = 570;
+      thirdBlockY = 555;
             }
     })
     // TODO:
@@ -106,31 +106,31 @@ function draw() {
 	//Code for interaction TOP
 	strokeWeight(0);													//no stroke for the blocks looks more retro
 	fill("green");														//color of the first block
-	rect(firstBlockX,firstBlockY,30,30);
+	rect(firstBlockX,firstBlockY,45,45);
 	fill("red");															//color of the attacking ball
-	ellipse(firstLocationX,firstLocationY,50,50);
+	ellipse(firstLocationX,firstLocationY,40,40);
 	
 	
 	//Code for interaction Middle
 	strokeWeight(0);													//no stroke for the blocks looks more retro
 	fill("green");														//color of the first block
-	rect(secondBlockX,secondBlockY,30,30);
+	rect(secondBlockX,secondBlockY,45,45);
 	fill("red");															//color of the attacking ball
-	ellipse(secondLocationX,secondLocationY,50,50);
+	ellipse(secondLocationX,secondLocationY,40,40);
 	
 	
 	//Code for interaction Bottom
 	strokeWeight(0);													//no stroke for the blocks looks more retro
 	fill("green");														//color of the first block
-	rect(thirdBlockX,thirdBlockY,30,30);
+	rect(thirdBlockX,thirdBlockY,45,45);
 	fill("red");															//color of the attacking ball
-	ellipse(thirdLocationX,thirdLocationY,50,50);
+	ellipse(thirdLocationX,thirdLocationY,40,40);
 	
 	
 	//hit code
-	hit = collideRectCircle(firstBlockX,firstBlockY,30,30,firstLocationX,firstLocationY,35,35);
-	hit1 = collideRectCircle(secondBlockX,secondBlockY,30,30,secondLocationX,secondLocationY,35,35);
-	hit2 = collideRectCircle(thirdBlockX,thirdBlockY,30,30,thirdLocationX,thirdLocationY,35,35);
+	hit = collideRectCircle(firstBlockX,firstBlockY,45,45,firstLocationX,firstLocationY,30,30);
+	hit1 = collideRectCircle(secondBlockX,secondBlockY,45,45,secondLocationX,secondLocationY,30,30);
+	hit2 = collideRectCircle(thirdBlockX,thirdBlockY,45,45,thirdLocationX,thirdLocationY,30,30);
 
 	
 //debugging code
@@ -140,15 +140,15 @@ function draw() {
 	
 	//how to get the blocks to drop at a different frame count
 	if(frameCount%6 === 0){
-		if(firstBlockY < 170){
+		if(firstBlockY < 155){
 			//ball 1 code to get the ball to drop
 			firstBlockY += g;
 		}
-		if(secondBlockY < 370){
+		if(secondBlockY < 355){
 			//ball 2 code to get the ball to drop
 			secondBlockY += g;
 		}
-		if(thirdBlockY < 570){
+		if(thirdBlockY < 555){
 			//ball 3 code to get the ball to drop
 			thirdBlockY += g;
 		}
@@ -258,14 +258,14 @@ var value2=2;
   if (keyCode === LEFT_ARROW) {
  firstBlockY = firstBlockY - 30;
   }if (firstBlockY < 0){ 									//cause the block to wrap around on the y axis
-  firstBlockY = 170;
+  firstBlockY = 155;
   } if (keyCode === UP_ARROW) {
     secondBlockY = secondBlockY - 30;
   }if (secondBlockY < 200){ 									//cause the block to wrap around on the y axis
-  secondBlockY = 370;
+  secondBlockY = 355;
   }if (keyCode === RIGHT_ARROW) {
 		thirdBlockY = thirdBlockY - 30;
   }if (thirdBlockY < 400){ 									//cause the block to wrap around on the y axis
-  thirdBlockY = 570;
+  thirdBlockY = 555;
 		}
 	}
