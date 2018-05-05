@@ -4,7 +4,7 @@ const g = 5;
 
 //first block variables
 var firstBlockX=(100);
-var firstBlockY=(155);
+var firstBlockY=(160);
 
 //first ball variables
 var firstLocationX=(1200);
@@ -13,7 +13,7 @@ var firstLocationY=(100);
 
 //second block variables
 var secondBlockX=(400);
-var secondBlockY=(355);
+var secondBlockY=(360);
 
 //second ball variables
 var secondLocationX=(1000);
@@ -22,7 +22,7 @@ var secondLocationY=(300);
 
 //third block variables
 var thirdBlockX=(700);
-var thirdBlockY=(555);
+var thirdBlockY=(560);
 
 //second ball variables
 var thirdLocationX=(400);
@@ -55,21 +55,21 @@ function setup() {
     window.bend.on('press', function firstBlock(){
         firstBlockY = firstBlockY - 30;
      if (firstBlockY < 0){ 									//cause the block to wrap around on the y axis
-          firstBlockY = 155; 
+          firstBlockY = 160; 
         }
     })
     
      window.touch.on('press', function firstBlock(){
        secondBlockY = secondBlockY - 30;
       if (secondBlockY < 200){ 									//cause the block to wrap around on the y axis
-      secondBlockY = 355;
+      secondBlockY = 360;
         }
     })
     
     window.piezo.on('press', function firstBlock(){
     thirdBlockY = thirdBlockY - 30;
       if (thirdBlockY < 400){ 									//cause the block to wrap around on the y axis
-      thirdBlockY = 555;
+      thirdBlockY = 560;
             }
     })
     // TODO:
@@ -128,7 +128,7 @@ function draw() {
 	//Code for interaction TOP
 	strokeWeight(0);													//no stroke for the blocks looks more retro
 	fill("green");														//color of the first block
-	rect(firstBlockX,firstBlockY,45,45);
+	rect(firstBlockX,firstBlockY,40,40);
 	fill("red");															//color of the attacking ball
 	ellipse(firstLocationX,firstLocationY,40,40);
 	
@@ -136,7 +136,7 @@ function draw() {
 	//Code for interaction Middle
 	strokeWeight(0);													//no stroke for the blocks looks more retro
 	fill("green");														//color of the first block
-	rect(secondBlockX,secondBlockY,45,45);
+	rect(secondBlockX,secondBlockY,40,40);
 	fill("red");															//color of the attacking ball
 	ellipse(secondLocationX,secondLocationY,40,40);
 	
@@ -144,15 +144,15 @@ function draw() {
 	//Code for interaction Bottom
 	strokeWeight(0);													//no stroke for the blocks looks more retro
 	fill("green");														//color of the first block
-	rect(thirdBlockX,thirdBlockY,45,45);
+	rect(thirdBlockX,thirdBlockY,40,40);
 	fill("red");															//color of the attacking ball
 	ellipse(thirdLocationX,thirdLocationY,40,40);
 	
 	
 	//hit code
-	hit = collideRectCircle(firstBlockX,firstBlockY,45,45,firstLocationX,firstLocationY,30,30);
-	hit1 = collideRectCircle(secondBlockX,secondBlockY,45,45,secondLocationX,secondLocationY,30,30);
-	hit2 = collideRectCircle(thirdBlockX,thirdBlockY,45,45,thirdLocationX,thirdLocationY,30,30);
+	hit = collideRectCircle(firstBlockX,firstBlockY,40,40,firstLocationX,firstLocationY,30,30);
+	hit1 = collideRectCircle(secondBlockX,secondBlockY,40,40,secondLocationX,secondLocationY,30,30);
+	hit2 = collideRectCircle(thirdBlockX,thirdBlockY,40,40,thirdLocationX,thirdLocationY,30,30);
 
 	
 //debugging code
@@ -162,15 +162,15 @@ function draw() {
 	
 	//how to get the blocks to drop at a different frame count
 	if(frameCount%6 === 0){
-		if(firstBlockY < 155){
+		if(firstBlockY < 160){
 			//ball 1 code to get the ball to drop
 			firstBlockY += g;
 		}
-		if(secondBlockY < 355){
+		if(secondBlockY < 360){
 			//ball 2 code to get the ball to drop
 			secondBlockY += g;
 		}
-		if(thirdBlockY < 555){
+		if(thirdBlockY < 560){
 			//ball 3 code to get the ball to drop
 			thirdBlockY += g;
 		}
@@ -280,14 +280,14 @@ var value2=2;
   if (keyCode === LEFT_ARROW) {
  firstBlockY = firstBlockY - 30;
   }if (firstBlockY < 0){ 									//cause the block to wrap around on the y axis
-  firstBlockY = 155;
+  firstBlockY = 160;
   } if (keyCode === UP_ARROW) {
     secondBlockY = secondBlockY - 30;
   }if (secondBlockY < 200){ 									//cause the block to wrap around on the y axis
-  secondBlockY = 355;
+  secondBlockY = 360;
   }if (keyCode === RIGHT_ARROW) {
 		thirdBlockY = thirdBlockY - 30;
   }if (thirdBlockY < 400){ 									//cause the block to wrap around on the y axis
-  thirdBlockY = 555;
+  thirdBlockY = 560;
 		}
 	}
