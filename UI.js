@@ -213,6 +213,10 @@ function draw() {
 	if (thirdLocationX < 1){				//will bounce along the x axis
 		thirdLocationX = 1200;
 	}
+    
+    if (thirdLocationY > 580 || thirdLocationY < 420){		// will bounce along the y axis
+		r = r * -1;
+	}
 	
 	
 	//score stuff
