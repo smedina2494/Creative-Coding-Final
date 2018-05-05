@@ -17,7 +17,7 @@ let board = new Board([touch, bend, piezo]);
 board.connect({baudrate: 9600});
 
 
-let keyboard = new Keybaord();
+let keyboard = new Keyboard();
 
 //touch.on(`tick`, console.log);
 // 
