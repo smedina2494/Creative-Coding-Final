@@ -42,7 +42,7 @@ var a = 3 // just a variable that will dictate how fast the ball is moving in th
 
 
 //ball 3 speed variables
-var q = 5	// just a variable that will dictate how fast the ball is moving in the x direction
+var q = 4.5	// just a variable that will dictate how fast the ball is moving in the x direction
 var r = 2 // just a variable that will dictate how fast the ball is moving in the y direction, but can also indicate the direction when multiplied by -1
 
 
