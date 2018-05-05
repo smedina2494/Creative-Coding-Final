@@ -42,7 +42,7 @@ var a = 3 // just a variable that will dictate how fast the ball is moving in th
 
 
 //ball 3 speed variables
-var q = 4.5	// just a variable that will dictate how fast the ball is moving in the x direction
+var q = 5	// just a variable that will dictate how fast the ball is moving in the x direction
 var r = 2 // just a variable that will dictate how fast the ball is moving in the y direction, but can also indicate the direction when multiplied by -1
 
 
@@ -139,15 +139,15 @@ function draw() {
 	
 	//how to get the blocks to drop at a different frame count
 	if(frameCount%6 === 0){
-		if(firstBlockY < 180){
+		if(firstBlockY < 170){
 			//ball 1 code to get the ball to drop
 			firstBlockY += g;
 		}
-		if(secondBlockY < 380){
+		if(secondBlockY < 370){
 			//ball 2 code to get the ball to drop
 			secondBlockY += g;
 		}
-		if(thirdBlockY < 580){
+		if(thirdBlockY < 570){
 			//ball 3 code to get the ball to drop
 			thirdBlockY += g;
 		}
