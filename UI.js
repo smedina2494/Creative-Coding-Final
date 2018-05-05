@@ -33,17 +33,18 @@ var showingText = false;
 
 //ball 1 speed variables
 var m = 5	// just a variable that will dictate how fast the ball is moving in the x direction
-var l = 2   // just a variable that will dictate how fast the ball is moving in the y direction, but can also indicate the direction when multiplied by -1
+var l = 2 // just a variable that will dictate how fast the ball is moving in the y direction, but can also indicate the direction when multiplied by -1
 
 
 //ball 2 speed variables
-var o = 6   // just a variable that will dictate how fast the ball is moving in the x direction
+var o = 5	// just a variable that will dictate how fast the ball is moving in the x direction
 var a = 3.5 // just a variable that will dictate how fast the ball is moving in the y direction, but can also indicate the direction when multiplied by -1
 
 
 //ball 3 speed variables
 var q = 5	// just a variable that will dictate how fast the ball is moving in the x direction
-var r = 2   // just a variable that will dictate how fast the ball is moving in the y direction, but can also indicate the direction when multiplied by -1
+var r = 2 // just a variable that will dictate how fast the ball is moving in the y direction, but can also indicate the direction when multiplied by -1
+
 
 
 function setup() {
@@ -85,7 +86,7 @@ var hit3 = false;
 
 function draw() {
 	
-	//These three rectangles are the borders/backgrounds for each playing area
+		//These three rectangles are the borders/backgrounds for each playing area
 	strokeWeight(4);
 	//Game 1
 	fill(240,146,34); //color of top game area
