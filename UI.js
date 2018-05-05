@@ -1,6 +1,6 @@
 //These are variables that will allow me to identify the location and sizes of each block for the purpose of calculating collisions.
 //gravity of the game
-const g = 5;
+const g = 6;
 
 //first block variables
 var firstBlockX=(100);
@@ -271,18 +271,18 @@ var value2=2;
 
 //A key pressed function that causes the movement of the blocks and will ultimately be changed to be caused by the arduino
 	
-	function keyPressed() {
+function keyPressed() {
   if (keyCode === LEFT_ARROW) {
  firstBlockY = firstBlockY - 30;
-  }if (firstBlockY < 0){ 									//cause the block to wrap around on the y axis
-  firstBlockY = 160;
+  }if (firstBlockY <= 0){ 									//cause the block to to hit the boarder
+  firstBlockY = 0;
   } if (keyCode === UP_ARROW) {
     secondBlockY = secondBlockY - 30;
-  }if (secondBlockY < 200){ 									//cause the block to wrap around on the y axis
-  secondBlockY = 360;
+  }if (secondBlockY <= 200){ 								//cause the block to to hit the boarder
+  secondBlockY = 200;
   }if (keyCode === RIGHT_ARROW) {
 		thirdBlockY = thirdBlockY - 30;
-  }if (thirdBlockY < 400){ 									//cause the block to wrap around on the y axis
-  thirdBlockY = 560;
+  }if (thirdBlockY <= 400){ 									//cause the block to to hit the boarder
+  thirdBlockY = 400;
 		}
 	}
