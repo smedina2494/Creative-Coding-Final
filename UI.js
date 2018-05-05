@@ -102,6 +102,27 @@ function draw() {
 	fill(86,18,16);//color of bottom game area
 	rect(0, 400, 1200, 200);
 	
+    //Text to give the game narrative and also give directions
+	push();
+	//font and style
+	textSize(20);
+	
+	//Game 1
+	fill ("blue");
+	text('Pedal to escape the evil balls! (Or press left arrow key)', 10, 20);
+	
+	
+	//Game 2
+	fill ("green");
+	text('Use soundwaves (drum) to escape the evil balls! (Or press up arrow key)', 10, 220);
+	
+	
+	//Game 3
+	fill ("white");
+	text('Punch the block to escape the evil balls! (Or press right arrow key)', 10, 420);
+	
+	pop();
+    
 	
 	//Code for collision of blocks with bombs
 	//Code for interaction TOP
@@ -206,7 +227,7 @@ function draw() {
 	//score stuff
 		textSize(32);
 		var t = "Score: " + str(score)
-		text(t, 200,50);
+        text(t, 1000,50);
 	
 	
 	
