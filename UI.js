@@ -54,22 +54,22 @@ function setup() {
     
     window.bend.on('press', function firstBlock(){
         firstBlockY = firstBlockY - 30;
-     if (firstBlockY < 0){ 									//cause the block to wrap around on the y axis
-          firstBlockY = 160; 
+     if (firstBlockY <= 0){ 									//cause the block to wrap around on the y axis
+          firstBlockY = 0; 
         }
     })
     
      window.touch.on('press', function firstBlock(){
        secondBlockY = secondBlockY - 30;
-      if (secondBlockY < 200){ 									//cause the block to wrap around on the y axis
-      secondBlockY = 360;
+      if (secondBlockY <= 200){ 									//cause the block to wrap around on the y axis
+      secondBlockY = 200;
         }
     })
     
     window.piezo.on('press', function firstBlock(){
     thirdBlockY = thirdBlockY - 30;
-      if (thirdBlockY < 400){ 									//cause the block to wrap around on the y axis
-      thirdBlockY = 560;
+      if (thirdBlockY <= 400){ 									//cause the block to wrap around on the y axis
+      thirdBlockY = 400;
             }
     })
     
@@ -267,17 +267,6 @@ if (hit7 == true || hit8 == true || hit9 == true){
 var value=0;
 var value1=1;
 var value2=2;
-
-//Cause the blocks to hit the boarder
-
-if (firstBlockY <= 0){ 									//cause the block to to hit the boarder
-  firstBlockY = 0;}
-
-if (secondBlockY <= 200){ 								//cause the block to to hit the boarder
-  secondBlockY = 200;}
-
-if (thirdBlockY <= 400){ 									//cause the block to to hit the boarder
-  thirdBlockY = 400;}
 
 //A key pressed function that causes the movement of the blocks and will ultimately be changed to be caused by the arduino
 	
