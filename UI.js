@@ -268,6 +268,16 @@ var value=0;
 var value1=1;
 var value2=2;
 
+//Cause the blocks to hit the boarder
+
+if (firstBlockY <= 0){ 									//cause the block to to hit the boarder
+  firstBlockY = 0;}
+
+if (secondBlockY <= 200){ 								//cause the block to to hit the boarder
+  secondBlockY = 200;}
+
+if (thirdBlockY <= 400){ 									//cause the block to to hit the boarder
+  thirdBlockY = 400;}
 
 //A key pressed function that causes the movement of the blocks and will ultimately be changed to be caused by the arduino
 	
