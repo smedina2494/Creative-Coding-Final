@@ -7,8 +7,8 @@ import {Button, ThresholdedSensor} from './Device.js';
 
 
 let touch = new ThresholdedSensor(500);
-let bend = new ThresholdedSensor(400);
-let piezo = new ThresholdedSensor(30);
+let bend = new ThresholdedSensor(600);
+let piezo = new ThresholdedSensor(50);
 window.touch = touch
 window.bend = bend
 window.piezo = piezo
