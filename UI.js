@@ -1,6 +1,6 @@
 //These are variables that will allow me to identify the location and sizes of each block for the purpose of calculating collisions.
 //gravity of the game
-const g = 6;
+const g = 4.5;
 
 //first block variables
 var firstBlockX=(100);
